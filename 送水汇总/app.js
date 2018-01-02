@@ -54,7 +54,7 @@ App({
     userInfo: null,
     openId: "",
     userId: "",
-    isUser: "1",//0买水者，1送水者
+    isUser: "0",//0买水者，1送水者
     address:""
   }
 })

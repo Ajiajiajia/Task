@@ -8,6 +8,7 @@
     <image bindtap="noFinish" class='imgNoFinish' src="http://oz3rf0wt0.bkt.clouddn.com/17-12-27/12250600.jpg" wx:if="{{noFinishBtn}}"></image>
     <image bindtap="noFinish" class='imgNoFinish' src="http://oz3rf0wt0.bkt.clouddn.com/17-12-27/77493493.jpg" wx:else></image>
   </view>
+
   <view wx:if="{{ifFinish}}">
     <view class="information" wx:for="{{noFinishArray}}" wx:key="{{item.id}}">
       <view class="divide" style="background:#F5F5F5;height:15rpx;"></view>
@@ -44,11 +45,14 @@
     </view>
   </view>
 </view>
-<view wx:else>
+
+
+<view wx:else>    
   <view class='title'>
     <text class='txtTotal'>总数</text>
     <text class='txtTotalnumber'>{{totalNumber}}</text>
   </view>
+  
   <view wx:if="{{ifFinish}}">
     <view class="information" wx:for="{{userArray}}" wx:key="this">
       <view class="divide" style="background:#F5F5F5;height:15rpx;"></view>

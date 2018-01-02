@@ -5,36 +5,16 @@ var textArray = []
 
 Page({
 
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     mode: ["自提", "送水上门"],
     textArray: [],
     totalnumber:0
-
   },
-
-  /**
-   * 点击按钮，清空列表内容
-   */
-  // rapid: function () {
-
-  //   //其实就是让数组变成一个空数组即可
-  //   this.setData({
-  //     textArray: [],
-  //     totalnumber: 0
-  //   });
-  // },
-
 
   receive_tap: function (e) {
     var that = this;
     var id = e.currentTarget.dataset.id
-
     // console.log(id)
-
     wx.request({
       method: "POST",
       url: 'http://192.168.1.17:3014/order/update',
@@ -77,12 +57,11 @@ Page({
   rapid: function () {
     var that = this;
 
+    // that.setData({
 
-    that.setData({
-
-      textArray: textArray,
-      totalnumber:textArray.length
-    })
+    //   textArray: textArray,
+    //   totalnumber:textArray.length
+    // })
 
     // console.log(id)
  totalnumber=textArray.length
